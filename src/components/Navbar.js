@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import { Container, Anchor } from 'atomize'
+import { Container, Anchor, Icon } from 'atomize'
 import { Link } from 'react-router-dom'
 import { ShopContext } from '../context/shopContext'
 
@@ -9,9 +9,9 @@ const Navbar = () => {
 
     return (
         <>  
-            <Container d="flex" flexDir="row" p="2rem" justify="space-between">
-                <Link to="/">Shop</Link>
-                <Anchor onClick={() => openCart()}>Cart</Anchor>
+            <Container d="flex" flexDir="row" p="2rem" justify="space-between" >
+                <Link to="/"><Icon name="Store" size="30px" color="black500" /></Link>
+                <Anchor onClick={() => openCart()}><Icon name="Bag" size="20px" color="black500" /></Anchor>
             </Container>
         </>
     )
