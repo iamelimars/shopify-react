@@ -10,14 +10,11 @@ import ProductPage from './pages/ProductPage'
 import Navbar from './components/Navbar'
 import Cart from './components/Cart'
 
-const debug =
-  process.env.NODE_ENV === "production" ? void 0 : new DebugEngine();
-
-// 1. Create a client engine instance
+const debug = process.env.NODE_ENV === "production" ? void 0 : new DebugEngine();
 const engine = new Styletron();
 
 
-function App() {
+const App = () => {
   return (
     <ShopProvider>
       <StyletronProvider value={engine} debug={debug} debugAfterHydration>
